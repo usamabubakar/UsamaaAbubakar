@@ -1,0 +1,240 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color:#121229;
+    font-family: fa5-proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:#A8B3D1;
+}
+
+.adminside{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    background-color: #121229;
+    height: 100vh;
+   
+}
+.navbarr{
+    position: sticky;
+    width: 80px;
+    height: 625px;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+    overflow: hidden;
+    color: #A8B3D1;
+}
+
+.navbarr:hover
+{
+    width: 310px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.navbarr ul{
+    position: absolute;
+    top: 7%;
+    left: 0;
+    width: 80%;
+    font-weight: bold;
+    font-size: 17px;
+    height: 80px;
+    margin-left: -2rem;
+    
+}
+.ul .fas{
+    font-size: 1005px;
+
+}
+.navbarr ul li{
+    position: relative;
+    width: 20rem;
+    list-style: none;
+    margin-top: 24px;
+    
+  
+}
+.navbarr ul li :hover{
+    background:#A8B3D1;
+    border-radius: 7px;
+    color: black;
+   
+}
+.navbarr ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #A8B3D1;
+    height: 60px;
+    
+}
+.navbarr ul li a .icon
+{
+    position: relative;
+    display: block;
+    min-width: 50px;
+    margin-right: 10px;
+    line-height: 67px;
+    padding-left: 5px;
+   
+}
+.navbarr ul li a .icon .fa
+{
+    font-size: 25px;
+    
+}
+.navbarr ul li a .title
+{
+    position: relative;
+    display: block;
+    padding: 0 8px;
+    line-height: 65px;
+    text-align: start;
+    white-space: nowrap;
+}
+.secondarea{
+    margin-top: 20px;
+    margin-left: 20px;
+  
+}
+.area{
+    width: 33rem;
+    height: 40%;
+}
+.infoarea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+    width: 600px;
+}
+.name{
+    width: 100%;
+}
+.info{
+    text-align: center;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 30px;
+    color: #A8B3D1;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 68px;
+    
+}
+.social ul{
+    display: flex; 
+}
+.social ul li  {
+    list-style: none;
+    margin-left: 25px;
+    font-size: 30px;
+    color: #FFB400;
+}
+.social ul li a{
+    color: #FFB400;
+}
+.social ul li :hover{
+    color: #A8B3D1
+}
+.infoarea img{
+    border-radius: 50%;
+}
+.dashboard{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.item{
+    width: 29rem;
+    height: 14rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 5px;
+    padding: 10px;
+    color: #A8B3D1;
+    flex-direction: column;
+    flex-wrap: wrap;
+  
+}
+.item .infoo h1{
+    font-size: 30px;
+}
+.item .btn{
+    background-color: #A8B3D1;
+    border: none;
+    width: 10rem;
+    height: 3rem;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 30px;
+    color: black;
+}
+.infoo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #A8B3D1;
+    padding: 20px;
+
+}
+
+.namee {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+
+}
+form input {
+    width: 30rem;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid black;
+    outline: none;
+    padding-left: 10px;
+
+
+
+}
+
+.bs-example form textarea {
+    width: 100%;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 2px solid black;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+
+}
+
+::placeholder {
+    font-size: 15px;
+}
+
+/* project  */
+
+.card {
+    width: 300px;
+    display: flex;
+}
+
+#cl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 210px;
+    font-size: 40px;
+    margin-top: -10px;
+  
+}
+
+

@@ -1,0 +1,83 @@
+body {
+    background-color: #39395f;
+}
+
+.card {
+    width: 20rem;
+    height: 17rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: seashell;
+}
+
+.card-header {
+    height: 5rem;
+    font-weight: bold;
+    border-bottom: 2px solid #39395f;
+}
+
+.card-body {
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 100rem;
+
+}
+
+.card-footer {
+    border-top: 2px solid #39395f;
+}
+
+.header {
+    box-shadow: 6px 6px 10px rgb(8, 194, 207);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cardd {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    box-shadow: 0px 3px 15px 4px rgb(8, 194, 207);
+
+}
+
+.namee {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+
+}
+
+form input {
+    width: 26rem;
+    color: black;
+    margin-bottom: 15px;
+    height: 45px;
+    border-radius: 5px;
+    border: 2px solid black;
+    outline: none;
+    padding-left: 10px;
+}
+
+form textarea {
+    width: 26rem;
+    height: 15rem;
+    /* margin-left: 10px; */
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 2px solid black;
+    outline: none;
+    padding-left: 10px;
+}
+
+::placeholder {
+    font-size: 15px;
+}
+
+@media (max-width:500px) {
+    .header h1 {
+        font-size: 20px;
+    }
+}

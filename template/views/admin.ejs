@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="shortcut icon" type="img" href="logo.png">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.5.11/standard/ckeditor.js"></script>
+    <style>
+        .modal-content {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #A8B3D1;
+            padding: 20px;
+
+        }
+
+        .namee {
+            font-size: 20px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        form input {
+            width: 52rem;
+            color: black;
+            margin-bottom: 15px;
+            height: 45px;
+            border-radius: 5px;
+            border: 2px solid black;
+            outline: none;
+            padding-left: 10px;
+        }
+
+        form textarea {
+            width: 52rem;
+            height: 20rem;
+            margin-left: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 2px solid black;
+            outline: none;
+            padding-left: 10px;
+        }
+
+        ::placeholder {
+            font-size: 15px;
+        }
+
+        .card {
+            width: 300px;
+            display: flex;
+        }
+
+        #cl {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-left: 210px;
+            font-size: 40px;
+            margin-top: -10px;
+        }
+    </style>
+    <script>
+
+    </script>
+
+</head>
+
+<body>
+    <!-- =======================Maseesage alaert section-======================= -->
+    <% if(projectinsert==1){%>
+
+        <div class="alert alert-success alert-dismissible">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Success!</strong> Project Inserted sucessfully...!
+        </div>
+
+        <%}%>
+        <% if(datasuccess==10){%>
+
+            <div class="alert alert-success alert-dismissible">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Success!</strong> Admin Data updated sucessfully...!
+            </div>
+    
+            <%}%>
+            <% if(topprojectinsert==3){%>
+
+                <div class="alert alert-success alert-dismissible">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Success!</strong> Top Project Inserted sucessfully...!
+                </div>
+
+                <%}%>
+                    <% if(bloginsert==6){%>
+
+                        <div class="alert alert-success alert-dismissible">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong>Success!</strong> Blog Inserted sucessfully...!
+                        </div>
+
+                        <%}%>
+
+
+                            <!-- =======================Maseesage alaert section end-======================= -->
+
+                            <div class="adminside">
+                                <div class="navbarr">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon"
+                                        viewBox="0 0 512 512">
+                                        <path stroke-linecap="round" stroke-miterlimit="10"
+                                            d="M80 160h352M80 256h352M80 352h352"
+                                            class="ionicon-fill-none ionicon-stroke-width"></path>
+                                    </svg>
+
+                                    <ul>
+
+                                        <span id="la" style="font-size: 25px; margin-left: 8px;" onclick="long()"><i
+                                                class="fas fa-bars"></i></span>
+
+                                        <li>
+                                            <a href="/">
+                                                <span class="icon"><i class="fa fa-tv"></i></span>
+                                                <span class="title">Dashboard</span>
+                                            </a>
+                                        </li>
+                                        <li>
+
+                                            <a href="/topproject">
+                                                <span class="icon "><i class="h1 fab fa-buffer"
+                                                        style="font-size: 30px;"></i>
+                                                </span>
+                                                <span class="title mt-2">Top Projects</span>
+
+                                            </a>
+
+
+                                        </li>
+                                        <li>
+
+                                            <a href="/project">
+                                                <span class="icon "><i class="fa fa-folder"></i>
+                                                </span>
+                                                <span class="title">Projects</span>
+
+                                            </a>
+
+
+                                        </li>
+                                        <li>
+                                            <a href="/blogpost">
+                                                <span class="icon"><i class="fa fa-paste"></i></span>
+                                                <span class="title">Blog Post</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="" type="button" data-toggle="modal" data-target="#setting">
+                                                <span class="icon"> <i class="fa fa-user-cog"></i></span>
+                                                <span class="title">Setting</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/logout">
+                                                <span class="icon"><i class="fa fa-sign-out-alt"></i></span>
+                                                <span class="title">Log Out</span>
+                                            </a>
+                                        </li>
+                                        </form>
+                                    </ul>
+                                </div>
+                                <div class="secondarea">
+                                    <div class="area">
+                                        <div class="infoarea">
+                                            <div class="img">
+                                                <%if(projectdata[0].adminimage){%>
+                                                    <img src="./upload/<%- projectdata[0].adminimage%>" width="200px"
+                                                        height="200px" class="img-fluid" alt="">
+                                                    <% } else { %>
+                                                        <h1>no photo</h1>
+                                                        <% } %>
+
+                                            </div>
+                                            <div class="name">
+
+                                                <div class="info">
+                                                    <%- projectdata[0].adminname%>
+
+                                                </div>
+                                                <div class="social">
+                                                    <ul>
+                                                        <li><a href="<%- projectdata[0].facebook%>"><i
+                                                                    class="fab fa-facebook"></i></a></li>
+                                                        <li><a href="<%- projectdata[0].whatsapp%>"><i
+                                                                    class="fab fa-whatsapp"></i></a></li>
+                                                        <li><a href="<%- projectdata[0].instgram%>"><i
+                                                                    class="fab fa-instagram"></i></a></li>
+                                                        <li><a href="<%- projectdata[0].github%>"><i
+                                                                    class="fab fa-github"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="dashboard">
+                                        <div class="item">
+                                            <div class="infoo d-flex justify-content-between  ">
+                                                <div class="p-4">
+                                                    <h1>Blogs</h1>
+                                                </div>
+                                                <div class="p-4">
+                                                    <h1>
+                                                        <%- projectdata[0].blogpost.length %>
+                                                    </h1>
+                                                </div>
+                                            </div>
+                                            <button class=" mt-4 btn btn-secondary" data-toggle="modal"
+                                                data-target="#blogpost">Write
+                                                New</button>
+                                        </div>
+                                        <div class="item">
+                                            <div class="infoo d-flex justify-content-between  ">
+                                                <div class="p-4">
+                                                    <h1>Project</h1>
+                                                </div>
+                                                <div class="p-4">
+                                                    <h1>
+                                                        <%- projectdata[0].project.length %>
+                                                    </h1>
+                                                </div>
+                                            </div>
+                                            <button class=" mt-4 btn btn-secondary" data-toggle="modal"
+                                                data-target="#myModal">Write
+                                                New</button>
+                                        </div>
+                                        <div class="item">
+                                            <div class="infoo d-flex justify-content-between  ">
+                                                <div class="p-4">
+                                                    <h1>Top Project</h1>
+                                                </div>
+                                                <div class="p-4">
+                                                    <h1>
+                                                        <%- projectdata[0].topproject.length %>
+                                                    </h1>
+                                                </div>
+                                            </div>
+                                            <button class=" mt-4 btn btn-secondary" data-toggle="modal"
+                                                data-target="#topproject">Write
+                                                New</button>
+                                        </div>
+                                        <div class="item">
+                                            <div class="infoo d-flex justify-content-between  ">
+                                                <div class="p-4">
+                                                    <h1>Site Views</h1>
+                                                </div>
+                                                <div class="p-4">
+                                                    <h1>
+                                                        <%- projectdata[0].views %>
+                                                    </h1>
+                                                </div>
+                                            </div>
+                                            <a href="/">
+                                                <button class=" mt-4 btn btn-secondary" data-toggle="modal"
+                                                data-target="">check</button>
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <div class="infoo d-flex justify-content-between  ">
+                                                <div class="p-4">
+                                                    <h2>Messages</h2>
+                                                </div>
+                                                <div class="p-4">
+                                                    <h1>
+                                                        <%- projectdata[0].contact.length %>
+                                                    </h1>
+                                                </div>
+                                            </div>
+                                            <a href="/contactwithadminformm"><button class=" mt-4 btn btn-secondary"
+                                                    data-toggle="modal" data-target="#my">Check All</button></a>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div id="myModal" class="modal fade" tabindex="-1">
+                                <div class="modal-dialog bg-dark">
+                                    <div class="modal-content ">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" style="color: red; font-size: 45px;"
+                                                data-dismiss="modal">&times;</button>
+                                            <h3 class="modal-title"><b><i class="fas fa-edit"></i> Write Simple
+                                                    Project</b>
+                                            </h3>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <form action="/insertproject" method="POST">
+
+                                                <div class="namee">
+                                                    <label for="">Title</label>
+                                                </div>
+                                                <input type="text" placeholder="title" required id="title" name="name">
+                                                <div class="namee">
+                                                    <label for="">Link</label>
+                                                </div>
+                                                <input type="text" placeholder="link of project" required id="title"
+                                                    name="link">
+                                                <div class="namee">
+                                                    <label for="">Languages use in Porject</label>
+                                                </div>
+                                                <input type="text" placeholder="language" required id="title"
+                                                    name="plang">
+                                                <div class="name">
+                                                    <label for="" style="font-size: 20px;">Description</label>
+
+                                                </div>
+                                                <textarea cols="58" rows="3" placeholder="leave a note" value=""
+                                                    id="editor" name="desc"></textarea>
+
+                                                <p class="text-secondary"><small>If you don't save, your changes will be
+                                                        lost.</small></p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger"
+                                                data-dismiss="modal">Cancel</button>
+                                            <button class="btn btn-primary">Save changes</button>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal HTML  top project -->
+                            <div id="topproject" class="modal fade" tabindex="-1">
+                                <div class="modal-dialog bg-dark">
+                                    <div class="modal-content ">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" style="color: red; font-size: 45px;"
+                                                data-dismiss="modal">&times;</button>
+                                            <h3 class="modal-title"><b><i class="fas fa-edit"></i> Write a Top
+                                                    Project</b>
+                                            </h3>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <form action="/topproject" method="POST" enctype="multipart/form-data">
+
+                                                <div class="namee">
+                                                    <label for="">Name of Project</label>
+                                                </div>
+
+                                                <input type="text" placeholder="Name" required id="title" name="name1">
+                                                <div class="namee mt-3">
+                                                    <label for="">Languages of Project</label>
+                                                </div>
+                                                <input type="text" placeholder="Languages use in project" required
+                                                    id="title" name="lang">
+                                                <div class="name mt-3">
+                                                    <label for="" style="font-size: 20px;">Description</label>
+
+                                                </div>
+                                                <textarea cols="58" rows="3" placeholder="Description of Project"
+                                                    value="" id="editorr" name="desc1"></textarea>
+                                                <div class="namee mt-3">
+                                                    <label for="">Link Of Project</label>
+                                                </div>
+                                                <input type="text" placeholder="Link of project" required id="title"
+                                                    name="link1">
+                                                <div class="namee mt-3">
+                                                    <label for="">Image</label>
+                                                </div>
+                                                <input type="file" required id="te" name="file" style=" color:white;">
+                                                <p class="text-secondary"><small>If you don't save, your changes will be
+                                                        lost.</small></p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger"
+                                                data-dismiss="modal">Cancel</button>
+                                            <button class="btn btn-primary">Save changes</button>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- blogp post  -->
+                            <div id="blogpost" class="modal fade" tabindex="-1">
+                                <div class="modal-dialog bg-dark">
+                                    <div class="modal-content ">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" style="color: red; font-size: 45px;"
+                                                data-dismiss="modal">&times;</button>
+                                            <h3 class="modal-title"><b><i class="fas fa-edit"></i> Write a blog post</b>
+                                            </h3>
+
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <form action="/blogpost" method="POST" enctype="multipart/form-data">
+
+                                                <div class="namee">
+                                                    <label for="">Name of Blog</label>
+                                                </div>
+
+                                                <input type="text" placeholder="Name" required id="title"
+                                                    name="bbname1">
+
+
+                                                <div class="name mt-3">
+                                                    <label for="" style="font-size: 20px;">paragraph no 1</label>
+
+                                                </div>
+                                                <textarea cols="58" rows="3" placeholder="leave a note" value=""
+                                                    id="editorrr" name="bbdesc1"></textarea>
+
+                                                <div class="namee mt-3">
+                                                    <label for="">Image</label>
+                                                </div>
+                                                <input type="file" id="te" name="file1" style=" color:white;">
+                                                <div class="name mt-3">
+                                                    <label for="" style="font-size: 20px;">Paragrap no 2</label>
+
+                                                </div>
+                                                <textarea cols="58" rows="3" placeholder="leave a note" value=""
+                                                    id="editorrrr" name="bbdesc2"></textarea>
+
+                                                <div class="namee mt-3">
+                                                    <label for="">Image</label>
+                                                </div>
+                                                <input type="file" id="te" name="file2" style=" color:white;">
+                                                <div class="name mt-3">
+                                                    <label for="" style="font-size: 20px;">paragraph no 3</label>
+
+                                                </div>
+                                                <textarea cols="58" rows="3" placeholder="leave a note" value=""
+                                                    id="editorrrrr" name="bbdesc3"></textarea>
+
+                                                <div class="namee mt-3">
+                                                    <label for="">Image</label>
+                                                </div>
+                                                <input type="file" id="te" name="file3" style=" color:white;">
+                                                <p class="text-secondary"><small>If you don't save, your changes will be
+                                                        lost.</small></p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger"
+                                                data-dismiss="modal">Cancel</button>
+                                            <button class="btn btn-primary">Save changes</button>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- settiing of profile  -->
+                            <div id="setting" class="modal fade" tabindex="-1">
+                                <div class="modal-dialog bg-dark">
+                                    <div class="modal-content ">
+                                        <div class="modal-header d-flex">
+                                            <button type="button" class="close" style="color: red; font-size: 45px;"
+                                                data-dismiss="modal">&times;</button>
+
+                                            <h3 class="modal-title"><b><i class="fas fa-cogs"></i> Admin Profile</b>
+                                            </h3>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <form action="/setuserdata" method="POST" enctype="multipart/form-data">
+                                                <div class="text-center">
+                                                    <%if(projectdata[0].adminimage){%>
+                                                        <img src="./upload/<%- projectdata[0].adminimage%>"
+                                                            style="border-radius: 50%;" width="130px" height="130px"
+                                                            alt="">
+                                                        <% } else { %>
+                                                            <h1>no photo</h1>
+                                                            <% } %>
+                                                </div>
+                                                <div class="namee">
+                                                    <label for="">Name Of Admin</label>
+                                                </div>
+                                                <input type="text" placeholder="Name"
+                                                    value="<%-projectdata[0].adminname%>" required id="title"
+                                                    name="admin">
+                                                <div class="namee">
+                                                    <label for="">UserName</label>
+                                                </div>
+                                                <input type="text" placeholder="Name"
+                                                    value="<%-projectdata[0].username%>" required id="title"
+                                                    name="aname">
+                                                <div class="namee">
+                                                    <label for="">Password</label>
+                                                </div>
+                                                <input type="text" placeholder="Password"
+                                                    value="<%-projectdata[0].password%>" required id="title"
+                                                    name="apassword">
+                                                <div class="namee">
+                                                    <label for="">Link Of facebook</label>
+                                                </div>
+                                                <input type="text" placeholder="Facebook"
+                                                    value="<%-projectdata[0].facebook%>" required id="title"
+                                                    name="facebook">
+                                                <div class="namee">
+                                                    <label for="">Link of Instagram</label>
+                                                </div>
+                                                <input type="text" placeholder="Instagram"
+                                                    value="<%-projectdata[0].instgram%>" required id="title"
+                                                    name="instgram">
+                                                <div class="namee">
+                                                    <label for="">Link of Github</label>
+                                                </div>
+                                                <input type="text" placeholder="Github" required
+                                                    value="<%-projectdata[0].github%>" id="title" name="github">
+                                                <div class="namee">
+                                                    <label for="">Link of Whatsapp</label>
+                                                </div>
+                                                <input type="text" placeholder="Whatsapp" required
+                                                    value="<%-projectdata[0].whatsapp%>" id="title" name="whatsapp">
+                                                <div class="namee">
+                                                    <label for="">Image</label>
+                                                </div>
+                                                <input type="file" placeholder="Image" id="title" name="file">
+                                                <p class="text-secondary"><small>If you don't save, your changes will be
+                                                        lost.</small></p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger"
+                                                data-dismiss="modal">Cancel</button>
+                                            <button class="btn btn-primary">Save changes</button>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal HTML  top project -->
+                            <div id="topproject" class="modal fade" tabindex="-1">
+                                <div class="modal-dialog bg-dark">
+                                    <div class="modal-content ">
+                                        <div class="modal-header">
+                                            <h2 class="modal-title">Top Project
+                                            </h2>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <form action="/topproject" method="POST" enctype="multipart/form-data">
+
+                                                <div class="namee">
+                                                    <label for="">Name of Project</label>
+                                                </div>
+
+                                                <input type="text" placeholder="Name" required id="title" name="name1">
+                                                <div class="namee mt-3">
+                                                    <label for="">Languages</label>
+                                                </div>
+                                                <input type="text" placeholder="Languages use in project" required
+                                                    id="title" name="lang">
+
+                                                <div class="name mt-3">
+                                                    <label for="" style="font-size: 20px;">Description</label>
+
+                                                </div>
+                                                <textarea cols="58" rows="3" placeholder="leave a note" value=""
+                                                    id="editorr" name="desc1"></textarea>
+
+                                                <div class="namee mt-3">
+                                                    <label for="">Image</label>
+                                                </div>
+                                                <input type="file" required id="te" name="file">
+                                                <p class="text-secondary"><small>If you don't save, your changes will be
+                                                        lost.</small></p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger"
+                                                data-dismiss="modal">Cancel</button>
+                                            <button class="btn btn-primary">Save changes</button>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+
+                            <script>
+                                function ab() {
+
+                                    window.location.href = "/logout";
+                                }
+                            </script>
+
+
+
+                            <script>
+                                CKEDITOR.replace('editor');
+                                CKEDITOR.replace('editorr');
+                                CKEDITOR.replace('editorrr');
+                                CKEDITOR.replace('editorrrr');
+                                CKEDITOR.replace('editorrrrr');
+                            </script>
+                            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+                                integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+                                crossorigin="anonymous"></script>
+                            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                                crossorigin="anonymous"></script>
+                            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+                                integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+                                crossorigin="anonymous"></script>
+                            <script
+                                src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/js/bootstrap-modalmanager.min.js"
+                                integrity="sha512-/HL24m2nmyI2+ccX+dSHphAHqLw60Oj5sK8jf59VWtFWZi9vx7jzoxbZmcBeeTeCUc7z1mTs3LfyXGuBU32t+w=="
+                                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

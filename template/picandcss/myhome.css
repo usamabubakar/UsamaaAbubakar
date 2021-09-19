@@ -1,0 +1,1234 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color:#121229;
+    font-family: fa5-proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:#d5d9e4;
+}
+html {
+    scroll-behavior: smooth;
+  }
+  .main{
+    width: 100vw;
+    height: 100vh;
+   display: flex;
+   position: fixed;
+   z-index: 99999;
+   color: #A8B3D1;
+   padding-top: 10rem;
+   align-items: center;
+   flex-direction: column;
+     background-color: #121229;
+   }
+   .loder{
+     position:absolute;
+     width: 15rem;
+     height: 15rem;
+     border-right: 0.5rem solid #FFB400;
+     border-radius: 50%;
+     animation: cir 2s linear infinite;
+   }
+   @keyframes cir{
+     0%{
+       transform: rotate(0deg);
+     }
+     100%{
+       transform: rotate(360deg);
+     }
+   }
+   .iimg {
+     position: relative;
+     top: 5rem;
+   }
+   .logoname{
+     position:relative;
+     top: 10rem;
+     left: 0rem;
+     color: #c6cde0;
+     font-family: cursive;
+
+   }
+.gotop{
+    position: fixed;
+    z-index: 2;
+    bottom: 20px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #A8B3D1;
+    color: black;
+
+}
+.topbtn{
+    font-size: 25px;
+    color: #FFB400;
+    text-decoration: none;
+    cursor: pointer;  
+}
+.sideemail{
+    z-index: 22;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.email{ 
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    color: #A8B3D1;
+    writing-mode: vertical-lr;
+    font-family: Ubuntu, sans-serif;
+    font-weight: bold;
+    z-index: 33;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+.line{
+    width: 3px;
+    height: 80px;
+    z-index: 33;
+    background-color: #A8B3D1;
+}
+.navbar{
+    background-color: rgba(8, 8, 8, 0.3);
+    font-family: fa5-proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #A8B3D1;
+    z-index:2;
+}
+.navbar ul{
+    margin-right: 10px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 5px;
+    position: relative;
+    color: #A8B3D1;
+}
+.navbar ul li{
+    margin-left: 10px;
+    font-size: 17px;
+    transition: all 2s ease-in-out;
+}
+.navbar ul li a:hover{
+    border-bottom: 5px solid #A8B3D1;
+    transform: scale(1.1);
+}
+#topheader .navbar-nav li.active a {
+    border-bottom: 5px solid #A8B3D1;
+   
+}
+.navbar ul li i{
+    margin-right: 5px;
+}
+.navv {
+    color: #A8B3D1;
+    color: #FFB400;
+}
+.navv a{
+    text-decoration: none;
+}
+.particle{
+    content: "";
+    position: absolute;
+    top: -50%;
+} 
+#particles-js{
+    position: relative;
+}
+canvas.particles-js-canvas-el{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.top .container-fluid{
+    background-color: rgba(3, 3, 3, 0.3);
+    margin-bottom: 1rem;
+    padding: 20px;
+}
+.bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bg2{
+    padding-left: 2rem;
+}
+.top .container-fluid .circle{
+    position: absolute;
+    z-index: 1;
+    height: 300px;
+    width:300px;
+    border: 3px solid beige;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    top: 40%;
+    left:50%;
+}
+.top .container-fluid .circle::before{
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: #ffb300b6;
+    border-radius: 50%;
+    top: 20px;
+    left: 20px;
+    transform-origin: 130px 130px;
+    animation:  cir 10s linear infinite;
+
+}
+
+
+@keyframes cir{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.top .container-fluid .circle1{
+    position: absolute;
+    z-index: 1;
+    height: 300px;
+    width:300px;
+    border: 3px solid beige;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    top: 40%;
+    left:50%;
+}
+.top .container-fluid .circle1::before{
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: #ffb300b6;
+    border-radius: 50%;
+    top: 20px;
+    left: 20px;
+    transform-origin: 130px 130px;
+    animation:  cir1 10s linear infinite;
+
+}
+
+
+@keyframes cir1{
+    0%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(-180deg);
+    }
+}
+.top .name h1{
+    font-weight: bolder;
+    color: #FFB400; 
+    text-transform: uppercase;
+    
+}
+.name h4{
+    font-weight: bolder;
+}
+.ttype{
+    margin-top: 70px;
+}
+.social ul{
+    margin-left: -45px;
+    
+}
+.social ul li{
+    list-style: none;
+    z-index: 1;
+}
+
+.social ul li a{
+    text-decoration: none;
+    margin: 3px;
+    list-style: none;
+    font-size: 20px;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+}
+.social ul li a{
+    color: #A8B3D1;
+}
+.social ul li a:hover{
+   transform: scale(1.1);
+   background-color: #FFB400;
+   color: black;
+}
+.social ul li a:hover{
+    color: black;
+}
+.socialbtn .butn{
+    width: 40px;
+    height: 52px;
+    text-align: center;
+    padding-left: 25px;
+    margin-top: 4px;
+    padding-right: 90px;
+}
+.socialbtn button a{
+    border: 2px solid #FFB400;
+    outline: none;
+    background:none;
+    border-radius: 40px;
+    font-weight: bold;
+    font-family:sans-serif;
+    line-height: 1.4;
+    transition: all 0.3s ease-in-out;
+    padding-bottom: 45px;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle;
+    position: relative;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    z-index: 1;
+    padding: 13px 30px 16px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;  
+     background-color: transparent;
+    transition: 0.7s all ease-in-out;
+    
+}
+.socialbtn a {
+    border: 2px solid #FFB400;
+    overflow: hidden;
+    display: inline-block;
+    line-height: 1.4;
+    border-radius: 35px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle;
+    user-select: none;
+    transition: 0.7s all ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    position: relative;
+    z-index: 1;
+    padding: 13px 70px 16px 35px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    background-color: transparent;
+    outline: none !important;
+}
+.socialbtn a .button-icon {
+    background-color: #FFB400;
+    position: absolute;
+    right: -1px;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    color: #111111;
+    border-radius: 50%;
+}
+.socialbtn a:hover{
+    background-color: #FFB400;
+    transform: translateX(10%);
+    color: #111111;
+    font-weight: bold;
+}
+.socialbtn button:hover{
+    background-color: #FFB400;
+    color: #111111;
+    font-weight: bold;
+    border: 2px solid #FFB400;
+    outline: none;
+
+}
+.socialbtn a:hover .button-icon{
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+
+/* =====================about section =============== */
+.heading{
+text-align: center;
+height: 8rem;
+}
+.heading .backname{
+    position: relative;
+    color: rgba(255, 255, 255, 0.04)
+
+}
+.heading .backname h1{
+    font-size: 100px;
+
+}
+.heading .frontname{
+    position: relative;
+    top: -105px;
+}
+.heading .frontname h1{
+    font-size: 55px;
+    font-weight: 800;
+    font-family: Popins,sans-serif;
+    line-height: 77px;
+
+}
+.heading .backname1{
+    position: relative;
+    color: rgba(255, 255, 255, 0.04)
+
+}
+.heading .backname1 h1{
+    font-size: 110px;
+
+}
+.heading .frontname1{
+    position: relative;
+    top: -105px;
+}
+.heading .frontname1 h1{
+    font-size: 45px;
+    font-weight: 800;
+    font-family: Popins,sans-serif;
+    line-height: 77px;
+
+}
+.heading .backname2{
+    position: relative;
+    color: rgba(255, 255, 255, 0.04)
+
+}
+.heading .backname2 h1{
+    font-size: 90px;
+
+}
+.heading .frontname2{
+    position: relative;
+    top: -97px;
+}
+.heading .frontname2 h1{
+    font-size: 45px;
+    font-weight: 800;
+    font-family: Popins,sans-serif;
+    line-height: 77px;
+
+}
+
+.about_intro{
+font-size: 17px;
+font-weight: bold;
+font-family: 'Open Sans', sans-serif;
+}
+.about_div{
+    width: 100%;
+    height: 100%;
+}
+.about_pic{
+    border: 4px solid black;
+    border-color:#4EC6B0;
+    height: 13rem;
+    width: 14rem;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.about_pic img{
+    transform: translate(13px,-57px);
+}
+.box{
+    border: 0.5px solid #6B6B6B;
+    height: 160px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    width: 180px;
+    border-radius: 10px;
+}
+.box p{
+    font-size: 60px;
+    font-weight: bold;
+}
+.box h4{
+    position: relative;
+    left: 40px;
+    letter-spacing: 1px;
+    top: -20px;
+    font-weight: 300;
+}
+
+.box h4::before{
+    content: "";
+    position: absolute;
+    left: -39px;
+    top: 15px;
+    width: 30px;
+    height: 1px;
+    background: #777;
+
+}
+.box .fas{
+    font-size:30px;
+    position: relative;
+    left: 10px;
+    top: 25px;
+}
+.pro_area .container-fluid{
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 7px 7px 10px  black;
+    border-radius: 20px;
+    padding-bottom: 10px;
+}
+/* =====================proejct area===========  */
+
+.project1{
+    width: 35rem;
+    height: 20rem;
+}
+.content_build{
+    position: relative;
+    left: -90px;
+   
+font-family: 'Open Sans', sans-serif;
+}
+.project4{
+    width: 35rem;
+    height: 20rem;
+    position: relative;
+    left: -90px;
+}
+.project3 {
+}
+.project3 .content_build{
+    z-index: 3;
+    position: relative;
+    left: 0px;
+   
+font-family: 'Open Sans', sans-serif;
+}.des{
+    background-color: rgba(252, 249, 249, 0.201);
+    font-family: Ubuntu, sans-serif;
+    padding: 3px;
+    max-width: 28rem;
+    min-width: 14rem;
+}
+.content_build .name{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.content_build .linkk a{
+    font-weight: 50px;
+    color:#FFB400;
+}
+
+.my_intro{
+font-size: 17px;
+font-weight: bold;
+}
+.my_intro button{
+    width: 180px;
+    margin-top: 10px;
+    background-color: rgba(3, 3, 3, 0.5);
+    border-color: #4EC6B0;
+    border: 2px solid #4EC6B0; 
+    outline: none;
+    font-size: 20px;
+    transition: all 0.2s ease-in-out;
+}
+.my_intro button:hover{
+    background-color: rgba(3, 3, 3, 0.5);
+    transform: scale(1.1);
+    border: 2px solid #4EC6B0; 
+}
+.progress{
+    height: 15px;
+}
+.progress-bar {
+    height: 10px;
+   
+}
+
+
+.count{
+    background-color: rgba(3, 3, 3, 0.5);
+    height: 15rem;
+    margin: 5px;
+}
+.experience{
+    border-radius: 20px;
+    background-color: rgba(3, 3, 3, 0.3);
+    margin: 10px;
+    padding: 30px;
+
+}
+.degre{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 40px;
+    font-weight: bold;
+}
+.experience h3::after{
+    
+        content: "";
+        display: block;
+        height: 3px;
+        background:#FFB400;
+        margin-top: 0.5rem;
+        width: 40%;
+        transition: width 0.4s ease-out;
+         
+        
+}
+.experience h3:hover::after{
+    width:4%;
+}
+.experience .time{
+    background-color: rgba(3, 3, 3, 0.7);
+    padding: 5px;
+    width: 140px;
+    text-align: center;
+    border-radius: 20px;
+}
+.experience .fas{
+    color: #FFB400;
+}
+.card{
+    transition: all 0.3s ease-in-out;
+    color: white;
+    margin-top: 5px;
+    height: 25rem;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+.let button{
+    width: 140px;
+    margin-left: 10px;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    outline: none;
+    font-weight: bold;
+    background: #FF4C60;
+    
+}
+.card-title{
+    font-size: 18px;
+    color: #FFB400;
+}
+.card-text{
+    font-size: 12px;
+}
+.carddate{
+    color: #FFB400;
+}
+.card-title:hover{
+    color: #A8B3D1;
+    cursor: pointer;
+}
+
+.card button{
+    width: 130px;
+    margin-top: 10px;
+    border: 2px solid #FF4C60; 
+    border-radius: 20px;
+    outline: none;
+    font-size: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.card-img img{
+    height: 13rem;
+    border-bottom: 4px solid #FFB400;
+    transition: all 0.2s ease-in-out;
+}
+
+.card:hover{
+    transform: scale(1.1)
+}
+.cardiv{
+ display: none;   
+}
+.otherporject{
+   
+    height: 19rem;
+    color: white;
+    font-family: Ubuntu, sans-serif;
+}
+.otherporject .card{
+    height: 100%;
+    padding: 14px;
+    width: 100%;
+   
+}
+
+.otherporject .icon1{
+    font-size: 43px;
+    color: #A8B3D1;
+   
+}
+.otherporject .icon2 a{
+    font-size: 25px;
+    list-style: none;
+    color: #FFB400;
+
+}
+.projectdesc{
+    margin-top: 16px;
+    color: #A8B3D1;
+    width: 100%;
+    font-size: 13px;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 20px;
+    font-weight: 700;
+    padding-left: 10px;
+}
+.projectlang{
+    width: 100%;
+    font-size: 15px;
+    position: absolute;
+    bottom: 10px;
+}
+.contact .area input{
+    width: 100%;
+    height: 48px;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    padding-left: 15px;
+    background-color: rgba(77, 76, 76, 0.5);
+    color: white;
+
+}
+.contact .area textarea{
+    margin: 10px;
+    height: 12rem;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    padding-left: 25px;
+    padding-top: 10px;
+    color: white;
+    background-color: rgba(77, 76, 76, 0.5)
+}
+.contact .area input:hover{
+    border: 1px solid #FFB400;
+}
+.contact .area textarea:hover{
+    border: 1px solid #FFB400;
+}
+footer .foot{
+    background-color: rgba(3, 3, 3, 0.3);
+    width: 100%;
+    margin-top: 10px;
+}
+.cir{
+    width: 40rem;
+    height: 1rem;
+    border-radius: 100%;
+    background-color: #FFB400;
+}
+.footicon{
+    font-size: 50px;
+    color: black;
+    text-align: center;
+    margin-top: 10px;
+    width: 70px;
+    height: 70px;
+    border-radius: 3%;
+    background-color: #FFB400;
+}
+@media(max-width:778px){
+  
+    .gotop{
+        width: 30px;
+        height: 30px;
+    }
+    .topbtn{
+        font-size: 15px;  
+    }
+    .email{ 
+        font-size: 13px;
+    }
+    .line{
+        height: 70px;
+    }
+    .bg2{
+        padding-left: 10rem;
+    }
+    .bar{
+        margin-top: 20px;
+    }
+    .socialbtn .butn{
+        width: 40px;
+        height: 45px;
+        
+    }
+    .socialbtn a {
+        padding: 10px 60px 10px 25px;
+    }
+    .socialbtn button{
+      
+        padding: 10px 25px 10px 28px;
+      
+        
+    }
+    .socialbtn a .button-icon {
+      
+        width: 42px;
+        height:42px;
+       
+    }
+    .about_me {
+        font-size: 80px;
+        text-transform: uppercase;
+        font-weight: bold;
+        position: absolute;
+        top: 530px;
+    
+    }
+    .about_me::after{
+        content: "About Me";
+        position: relative;
+        color: white;
+        top: -150px;
+        font-weight: bold;
+        font-size: 40px;
+        
+    }
+    .about_pic{
+        border: 4px solid black;
+        border-color:#4EC6B0;
+        height: 13rem;
+        width: 13rem;
+    }
+    .about_pic img{
+        transform: translate(13px,-57px);
+    }
+    .project1{
+        width: 30rem;
+        height: 18rem;
+        position:absolute;
+    }
+    .project2{
+        position: relative;
+        background-color:rgba(20, 20, 20, 0.6);
+        padding: 5px;
+    
+    }
+    .content_build{
+        position: relative;
+        left: 0px;
+    }
+    .project4{
+        width: 30rem;
+        height: 18rem;
+        position: relative;
+        left: -0px;
+    }
+    .project3 {
+        z-index: 3;
+        position: absolute;
+        
+        background-color:rgba(20, 20, 20, 0.6);
+        padding: 5px;
+    }
+    .project3 .content_build{
+       
+        position: relative;
+        left: 0px;
+    
+    }
+    .cir{
+        width:30rem;
+        height: 1rem;
+        border-radius: 100%;
+        background-color: #FFB400;
+    }
+    .footicon{
+        font-size: 30px;
+        color: black;
+        text-align: center;
+        margin-top: 10px;
+        width: 50px;
+        height: 50px;
+        border-radius: 3%;
+        background-color: #FFB400;
+    }
+    .foot h1{
+        font-size: 24px;
+        margin-top: 3px;
+    }
+    .foot h6{
+        font-size: 15px;
+    }
+}
+
+@media(max-width:576px){
+    .email{
+        display: none;
+    }
+   
+    .sideemail{
+        display: none;
+    }
+    .line{
+        display: none;
+    }
+    nav img{
+        width: 200px;
+    }
+   
+    .para{
+        text-align: center;
+        width: 18rem;
+        background-color: rgba(252, 249, 249, 0.3);
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 10px;
+    }
+    .about_intro{
+        font-size: 16px;
+    font-weight: bold;
+    }
+    .bg2{
+   
+        padding-left: 5rem;
+    }
+    .bg h1{
+        font-size: 26px;
+    }
+    .bg2 h1{
+        font-size: 20px;
+    }
+    .bg2 h4{
+        font-size: 20px;
+    }
+    .socialbtn a {
+        padding: 10px 55px 10px 20px;
+    }
+    .socialbtn button{
+      
+        padding: 10px 20px 10px 25px;
+        margin-bottom: 5px;
+      
+        
+    }
+    .socialbtn a .button-icon{
+        width: 42px;
+        height: 42px;
+    }
+    .heading{
+        height: 4rem;
+    }
+    .heading .backname h1{
+        font-size: 65px;
+    
+    }
+    .heading .frontname{
+        position: relative;
+        top: -85px;
+    }
+    .heading .frontname h1{
+        font-size: 40px;
+        font-weight: 800;
+        font-family: Popins,sans-serif;
+        line-height: 77px;
+    
+    }
+    
+    .heading .backname1{
+        position: relative;
+        color: rgba(255, 255, 255, 0.04)
+    
+    }
+    .heading .backname1 h1{
+        font-size: 60px;
+    
+    }
+    .heading .frontname1{
+        position: relative;
+        top: -80px;
+    }
+    .heading .frontname1 h1{
+        font-size: 30px;
+        font-weight: 900;
+        font-family: Popins,sans-serif;
+        line-height: 77px;
+    
+    }
+    .heading .backname2{
+        position: relative;
+        color: rgba(255, 255, 255, 0.04)
+    
+    }
+    .heading .backname2 h1{
+        font-size: 55px;
+    
+    }
+    .heading .frontname2{
+        position: relative;
+        top: -76px;
+    }
+    .heading .frontname2 h1{
+        font-size: 30px;
+        font-weight: 800;
+        font-family: Popins,sans-serif;
+        line-height: 77px;
+    
+    }
+    .heading .backname3{
+        position: relative;
+        color: rgba(255, 255, 255, 0.04)
+    
+    }
+    .heading .backname3 h1{
+        font-size: 55px;
+    
+    }
+    .heading .frontname3{
+        position: relative;
+        top: -76px;
+    }
+    .heading .frontname3 h1{
+        font-size: 30px;
+        font-weight: 800;
+        font-family: Popins,sans-serif;
+        line-height: 77px;
+    
+    }
+   
+    .project1{
+        width: 24rem;
+        height: 16rem;
+        position:absolute;
+       
+    }
+    .project2{
+        width: 24rem;
+        height: 16rem;
+        position: relative;
+        background-color:rgba(20, 20, 20, 0.6);
+        padding: 10px;
+    
+    }
+    .project4{
+        width: 24rem;
+        height: 16rem;
+        position: relative;
+        left: -0px;
+        
+    }
+    .project3 {
+        width: 24rem;
+        height: 16rem;
+        z-index: 3;
+        position: absolute;
+        padding: 20px;
+    }
+    .project3 .content_build{
+       
+        position: relative;
+        left: 0px;
+        
+    
+    }
+    .degre{
+        margin-top: 10px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .cir{
+        width:16rem;
+        height: 1rem;
+    }
+    .footicon{
+        font-size: 40px;
+        width: 60px;
+        height: 60px;
+    }
+    .foot h1{
+        font-size: 14px;
+        margin-top: 3px;
+    }
+    .foot h6{
+        font-size: 12px;
+    }
+}
+@media(max-width:335px){
+    nav img{
+        width: 170px;
+    }
+    .bg h1{
+        font-size:20px;
+    }
+    .bg2{
+   
+        padding-left: 2rem;
+    }
+    .top .container-fluid .circle{
+        height: 230px;
+        width:230px;
+        top: 42%;
+        left:50%;
+    }
+    .top .container-fluid .circle::before{
+        height: 40px;
+        width: 40px;
+        top: 16px;
+        left: 16px;
+        transform-origin: 100px 100px;    
+    }
+    .socialbtn a {
+        padding: 8px 50px 8px 20px;
+    }
+    .socialbtn button{
+      
+        padding: 8px 17px 8px 23px;
+        margin-bottom: 5px;
+      
+        
+    }
+    .socialbtn a .button-icon{
+        width: 37px;
+        height: 37px;
+    }
+    .immg img{
+        width: 160px;
+        height: 160px;
+    }
+    .about_pic img{
+        width: 180px;
+        height: 180px;
+    }
+    .about_pic{
+        border: 4px solid black;
+        border-color:#4EC6B0;
+        height: 12rem;
+        width: 12rem;
+    }
+    .about_pic img{
+        transform: translate(11px,-57px);
+    }
+
+    .tyyoe{
+        margin-top: 0rem;
+    }
+    .about_me {
+        margin-top: 10px;
+        margin-left: -2px;
+        margin-bottom: -5px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .about_intro{
+        font-size: 16px;
+    font-weight: bold;
+    padding: 30px;
+    }
+   .projectbox{
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+    .project1{
+        width: 17rem;
+        height: 16rem;
+        position:absolute;
+    }
+    .project2{
+        width: 15rem;
+        position: relative;
+        background-color:rgba(20, 20, 20, 0.6);
+        padding: 5px;
+        height: 15.5rem;
+    }
+    .content_build .feature{
+        margin-top: 5px;
+    }
+    .content_build .name{
+        font-size: 17px;
+        margin-top: -10px;
+    }
+    .content_build .linkk{
+        font-size: 10px;
+        margin-top: 0px;
+    }
+    .content_build .des{
+        font-size: 15px;
+    }
+    .content_build .lang{
+        font-size: 14px;
+    }
+    .project4{
+        width: 17rem;
+        height: 16rem;
+        position: relative;
+        left: -0px;
+    }
+    .project3 {
+        width: 15rem;
+        z-index: 3;
+        position: absolute;
+    }
+    .project3 .content_build{
+        position: relative;
+        left: 0px;
+    }
+    .my_intro button{
+        width: 130px;
+        font-size: 15px;
+     }
+     .percntge h4{
+         font-size: 20px;
+     }
+     .degre{
+        margin-top: 10px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .cir{
+        width:17rem;
+        height: 1rem;
+        border-radius: 100%;
+        background-color: #FFB400;
+    }
+    .maail h6{
+        font-size: 13px;
+        font-weight: bold;
+    }
+    .footicon{
+        font-size: 30px;
+        color: black;
+        text-align: center;
+        margin-top: 10px;
+        width: 50px;
+        height: 50px;
+        border-radius: 3%;
+        background-color: #FFB400;
+    }
+    .foot h1{
+        font-size: 12px;
+        margin-top: 3px;
+    }
+    .foot h6{
+        font-size: 12px;
+    }
+}

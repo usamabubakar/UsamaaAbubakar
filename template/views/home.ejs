@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UsamaAbuBakar</title>
+    <link rel="shortcut icon" type="img" href="logo.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script src="https://kit.fontawesome.com/2b9c5e787e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="myhome.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="lightbox.min.css" rel="stylesheet" />
+    <script src="lightbox-plus-jquery.min.js"></script>
+
+    <script>
+        function load() {
+            $(".main").fadeOut();
+        }
+
+    </script>
+
+    <style>
+
+
+    </style>
+</head>
+
+<body onload="load()">
+    <div class="main" id="mmain">
+        <div class="loder">
+
+        </div>
+        <div class="iimg">
+            <img src="logo.png" width="100px" height="100px" alt="">
+        </div>
+        <div class="logoname">
+            <h2>Sami Mehar</h2>
+        </div>
+    </div>
+    <div class="gotop">
+        <a class="topbtn d-flex justify-content-center align-items-center"><i class="fas fa-arrow-up"></i></a>
+    </div>
+    <div class="sideemail">
+        <div class="email">
+            <a href="mailto:usamaabubakar785@gmail.com" style="color: #A8B3D1; text-decoration: none;">
+                <p>usamaabubakar785@gmail.com</p>
+            </a>
+            <div class="line"></div>
+        </div>
+
+    </div>
+    <div class="con">
+        <header id="topheader">
+            <nav class="navbar navbar-expand-lg navbar-dark sticky-top " id="myhome">
+                <a class="navbar-brand" href="#myhome"><img class="ml-1 img-fluid" src="logo with name bold.png"
+                        width="270px" height="80px" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#myhome">
+                                <i class="fas fa-home"></i>Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#aboutme">
+                                <i class="far fa-address-card"></i>About Me</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#myproject">
+                                <i class="fas fa-project-diagram"></i>Project</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#myblog">
+                                <i class="fab fa-blogger-b"></i>Blog</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#mycontact">
+                                <i class="fas fa-phone-square-alt"></i>Contact Me</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="samii/logo with name/logo.jpg" download>
+                                <i class="fas fa-file"></i>Resume</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </nav>
+        </header>
+        <section class="top">
+            <div class="container-fluid " id="particles-js">
+                <div class="row  d-flex justify-content-center  align-items-center">
+                    <div class="col-md-6 d-flex flex-column justify-content-center align-items-center bg">
+                        <div class="circle"></div>
+                        <div class="image d-flex flex-column justify-content-start  align-items-center">
+                            <div class="immg d-flex justify-content-end align-items-center">
+                                
+                                <img src="admin.png" class="mt-5" alt="" width="200px" height="200px"
+                                    style="border-radius:50% ; z-index: 2;">
+                            </div>
+
+                        </div>
+                        <div class="tyype" style="margin-top: 4rem;">
+                            <h1><b style="color: #FFB400">I Am </b><span class="type"></span></h1>
+                        </div>
+
+                    </div>
+                    <div class=" bg2 col-md-6 name  d-flex flex-column justify-content-center">
+                        <h3>Hi there, </h3>
+                        <h1>I'M <%- projectdata[0].adminname%>
+                        </h1>
+                        <h4>I'M a Software Engineer <br> & Designer</h4>
+
+                        <div class="social flex-column">
+                            <ul class="d-flex justify-content-start ">
+                                <li><a href="<%- projectdata[0].facebook%>" target="__blank"><i
+                                            class="fab fa-facebook"></i></a></li>
+                                <li><a href="<%- projectdata[0].whatsapp%>" target="__blank"><i
+                                            class="fab fa-whatsapp"></i></a></li>
+                                <li><a href="<%- projectdata[0].instgram%>" target="__blank"><i
+                                            class="fab fa-instagram"></i></a></li>
+                                <li><a href="<%- projectdata[0].github%>" target="__blank"><i
+                                            class="fab fa-github"></i></a></li>
+                            </ul>
+                            <div class="socialbtn">
+                                <a class="butn" href="mailto:usamaabubakar785@gmail.com">
+                                    <span class="button-text">Hire Me</span>
+                                </a>
+                                <a class="buttn ml-2 mt-1" href="about.html">
+                                    <span class="button-text">Download CV</span>
+                                    <span class="button-icon fas fa-download"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <div class="heading">
+            <div class="backname">
+                <h1>RESUME</h1>
+            </div>
+            <div class="frontname">
+                <h1>ABOUT <span style="color: #FFB400;">ME</span></h1>
+            </div>
+        </div>
+        <section class="about " id="aboutme">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 about_intro p-5" data-aos="fade-up" data-aos-duration="1000">
+                        Hello! I am <span style=" color: #FFB400;">Usama Abubakar</span>, a student of Software
+                        Engineering,
+                        passionate about learning and exploring technology in the
+                        modern era, Lahore PK. <br> I have experience in <span style=" color: #FFB400;">web site
+                            Devlopment</span> and design and customization, also I am good at WordPress.
+                        <br> <br>
+                        A Web Developer with a good grip on basic front-end development tools including <span
+                            style="color: #FFB400;"> HTML, CSS,
+                            Bootstrap, Javascript along with grip on back-end frameworks NodeJS, Express,
+                            PHP, MySQL and MongoDB </span> with extensive hands-on experience contributing to
+                        open-source
+                        codes.
+                        <br>
+                        <div class="socialbtn mt-4">
+                            <a class="buttn" href="mailto:usamaabubakar785@gmail.com">
+                                <span class="button-text">Get In Touch</span>
+                                <span class="button-icon fas fa-arrow-alt-circle-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 about_pro counter-show d-flex justify-content-center align-items-center "
+                        data-aos="zoom-in" data-aos-duration="2000">
+                        <div class="container-fluid ">
+                            <div class="row d-flex justify-content-center align-items-center">
+                                <div class="col-sm-5 box m-3  ">
+                                    <div class="d-flex">
+                                        <p style="color: #FFB400;" class="counter"> 20</p><sup><i class="fas fa-plus"
+                                                style="color: white;"></i></sup>
+
+                                    </div>
+                                    <h4 class=" position-relative">Top<span class="d-block">Project</span></h4>
+                                </div>
+                                <div class="col-sm-5 box m-3">
+                                    <div class="d-flex">
+                                        <p style="color: #FFB400;" class="counter"> 70</p><sup><i class="fas fa-plus"
+                                                style="color: white;"></i></sup>
+
+                                    </div>
+                                    <h4 class=" position-relative">Blog<span class="d-block">Post</span></h4>
+
+                                </div>
+                                <div class="col-sm-5 box m-3">
+                                    <div class="d-flex">
+                                        <p style="color: #FFB400;" class="counter"> 20</p><sup><i class="fas fa-plus"
+                                                style="color: white;"></i></sup>
+
+                                    </div>
+                                    <h4 class=" position-relative">Working<span class="d-block">Time</span></h4>
+
+                                </div>
+                                <div class="col-sm-5 box m-3">
+                                    <div class="d-flex">
+                                        <p style="color: #FFB400;" class="counter"> 30</p><sup><i class="fas fa-plus"
+                                                style="color: white;"></i></sup>
+
+                                    </div>
+                                    <h4 class=" position-relative">Small<span class="d-block">Project</span></h4>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="heading" id="myproject">
+            <div class="backname2">
+                <h1>WORKING</h1>
+            </div>
+            <div class="frontname2">
+                <h1>MY<span style="color: #FFB400;">PROJECT</span></h1>
+            </div>
+        </div>
+        <section class="project d-flex justify-content-center align-items-center">
+            <div class="container mb-5 ">
+                <div class="row projectbox d-flex justify-content-center align-items-center">
+                    <div class="mt-4 mb-4 d-flex justify-content-center align-items-center mainbox " data-aos="fade-up"
+                        data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+                        <div class="project1">
+                            <a href="azan.png" data-lightbox="upload-1">
+                                <img src="azan.png"class="img-fluid figure-img" width="100%" height="100%" alt=""></a>
+                           
+                        </div>
+                        <div class="project2">
+                            <div class="content_build">
+                                <p class="d-flex justify-content-end feature "
+                                    style="color: #FFB400; font-weight: bold;">Featured
+                                    Project</p>
+                                <p class="name d-flex justify-content-end ">Namaz Timing Web</p>
+                                <p class="d-flex justify-content-end flex-wrap rounded des ">This web app show today or
+                                    all month Namaz timing for every country</p>
+                                <p class="d-flex justify-content-end flex-wrap rounded lang ">HTML/CSS &nbsp;
+                                    NodeJs/Express
+                                    &nbsp; API</p>
+                                <p class="linkk d-flex justify-content-end flex-wrap px-1 rounded"><a
+                                        href="https://github.com/usamabubakar/azantime" target="_blank "
+                                        rel="noopener noreferrer " style="font-size: 25px;"><i
+                                            class="fab fa-github "></i></a> &nbsp;
+                                    <a href="https://azantime.herokuapp.com/" target="_blank "
+                                        rel="noopener noreferrer " style="font-size: 25px;"><i
+                                            class=" ml-2 fas fa-sign-in-alt "></i></a>
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="di mt-2 mb-4 d-flex justify-content-center align-items-center" data-aos="fade-up"
+                        data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+
+                        <div class="project3 d-flex justify-content-start align-items-center ">
+                            <div class="content_build ">
+                                <p class="d-flex justify-content-start " style="color: #FFB400; font-weight: bold;">
+                                    Featured Project</p>
+                                <p class="name d-flex justify-content-start ">Resturent Web App</p>
+                                <p class="d-flex justify-content-start flex-wrap rounded des ">
+                                    Resturent website if fullly responsive website
+                                    admin side where admin can handle everything.
+                                </p>
+                                <p class="d-flex justify-content-start flex-wrap rounded lang">HTML/CSS &nbsp;
+                                    Php/Sql Bootstrap</p>
+                                <p class="linkk d-flex justify-content-start flex-wrap px-1 rounded"><a href=""
+                                        target="_blank " rel="noopener noreferrer " style="font-size: 25px;">
+                                        <i class="fab fa-github "></i></a> &nbsp;
+                                    <a href="" target="_blank " rel="noopener noreferrer " style="font-size: 25px;">
+                                        <i class=" ml-2 fas fa-sign-in-alt "></i></a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="project4">
+                            <a href="resturent.png" data-lightbox="upload-1">
+                                <img src="resturent.png"class="img-fluid figure-img" width="100%" height="100%" alt=""></a>
+                            
+                        </div>
+                    </div>
+                    <div class="di mt-2 mb-4 d-flex justify-content-center align-items-center" data-aos="fade-up"
+                        data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+                        <div class="project1">
+                            <a href="sticky.png" data-lightbox="upload-1">
+                                <img src="sticky.png"class="img-fluid figure-img" width="100%" height="100%" alt=""></a>
+                        </div>
+                        <div class="project2">
+                            <div class="content_build ">
+                                <p class="d-flex justify-content-end feature"
+                                    style="color: #FFB400; font-weight: bold;">Featured Project</p>
+                                <p class="name d-flex justify-content-end ">Sticky Notes Web</p>
+                                <p class="d-flex justify-content-end flex-wrap rounded des ">
+                                    This web app saves all records in database with login system sessions
+                                    handling and CRUD system.
+                                </p>
+                                <p class="d-flex justify-content-end flex-wrap rounded lang ">HTML/CSS &nbsp;
+                                    NodeJs/Express &nbsp; MongoDB/Atlas</p>
+                                <p class="linkk d-flex justify-content-end flex-wrap px-1 rounded">
+                                    <a href="https://github.com/usamabubakar/stickynotes" target="_blank "
+                                        rel="noopener noreferrer " style="font-size: 25px;">
+                                        <i class="fab fa-github "></i></a> &nbsp;
+                                    <a href="https://sticky-nots.herokuapp.com/" target="_blank "
+                                        rel="noopener noreferrer " style="font-size: 25px;"><i
+                                            class=" ml-2 fas fa-sign-in-alt "></i></a>
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="di mt-2 mb-4 d-flex justify-content-center align-items-center" data-aos="fade-up"
+                        data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+
+                        <div class="project3 d-flex justify-content-start align-items-center ">
+                            <div class="content_build  ">
+                                <p class="d-flex justify-content-start feature"
+                                    style="color: #FFB400; font-weight: bold;">Featured
+                                    Project</p>
+                                <p class="name d-flex justify-content-start ">Weather Web App </p>
+                                <p class="d-flex justify-content-start flex-wrap rounded des ">
+                                    This web app shows current time with max/min weather and type of weather with a
+                                    friendly user interface
+                                </p>
+                                <p class="d-flex justify-content-start flex-wrap rounded lang ">HTML/CSS &nbsp;
+                                    NodeJs/Express
+                                    &nbsp; OpenWeather-API</p>
+                                <p class="linkk d-flex justify-content-start flex-wrap px-1 rounded"><a
+                                        href="https://github.com/usamabubakar/appweather " target="_blank "
+                                        rel="noopener noreferrer " style="font-size: 25px;"><i
+                                            class="fab fa-github "></i></a> &nbsp;
+                                    <a href="https://weather-app-by-sami-mehar.herokuapp.com/" target="_blank "
+                                        rel="noopener noreferrer " style="font-size: 25px;"><i
+                                            class=" ml-2 fas fa-sign-in-alt "></i></a>
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="project4">
+                            <a href="App.png" data-lightbox="upload-1">
+                                <img src="App.png"class="img-fluid figure-img" width="100%" height="100%" alt=""></a>
+                           
+                        </div>
+                    </div>
+                    <div class="di mt-2 mb-2 d-flex justify-content-center align-items-center" data-aos="fade-up"
+                        data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+                        <div class="project1">
+                            <a href="covid.png" data-lightbox="upload-1">
+                                <img src="covid.png"class="img-fluid figure-img" width="100%" height="100%" alt=""></a>
+                        </div>
+                        <div class="project2">
+                            <div class="content_build ">
+                                <p class="d-flex justify-content-end feature"
+                                    style="color: #FFB400; font-weight: bold;">Featured Project</p>
+                                <p class="name d-flex justify-content-end ">Covid-19 Dashboard</p>
+                                <p class="d-flex justify-content-end flex-wrap rounded des ">This dashboard update cases
+                                    for all Countries on regular basis.</p>
+                                <p class="d-flex justify-content-end flex-wrap rounded lang ">HTML/CSS &nbsp;
+                                    NodeJs/Express&nbsp; Covid-API</p>
+                                <p class="linkk d-flex justify-content-end flex-wrap px-1 rounded"><a
+                                        href="https://github.com/usamabubakar/covidtracker" target="_blank "
+                                        rel="noopener noreferrer " style="font-size: 25px;"><i
+                                            class="fab fa-github "></i></a> &nbsp;
+                                    <a href="http://coronawebtracker.herokuapp.com/" target="_blank "
+                                        rel="noopener noreferrer " style="font-size: 25px;"><i
+                                            class=" ml-2 fas fa-sign-in-alt "></i></a>
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+    </section>
+    <div class="heading" id="myedu">
+        <div class="backname1">
+            <h1>RESUME</h1>
+        </div>
+        <div class="frontname1">
+            <h1>MY<span style="color: #FFB400;">EDUCATION</span></h1>
+        </div>
+    </div>
+    <section data-aos="fade-up" data-aos-duration="2000">
+
+        <div class="container-fluid">
+
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-sm-5 experience">
+                    <div class="my">
+                        <h5 class="time"><i class="fas fa-graduation-cap"></i> 2017-2018</h5>
+                        <h3 class="part ml-4">Acamedic Degree</h3>
+                        <p class="ml-4">From City Model School Ellah Abad District Kasur</p>
+                    </div>
+                    <div class="my">
+                        <h5 class="time"><i class="fas fa-graduation-cap"></i> 2018-2019</h5>
+                        <h3 class="part ml-4">Intermediate Degree</h3>
+                        <p class="ml-4">From Model Science College Ellah Abad District Kasur Tehsil chunia</p>
+                    </div>
+                    <div class="my">
+                        <h5 class="time"><i class="fas fa-graduation-cap"></i> 2019-2023</h5>
+                        <h3 class="part ml-4">Bachelor's Degree</h3>
+                        <p class="ml-4">From Minhaj University (Continue)</p>
+                    </div>
+                </div>
+                <div class=" col-sm-5 experience">
+
+                    <div class="my">
+                        <h5 class="time"><i class="fas fa-briefcase"></i> 2019-2020</h5>
+                        <h3 class="part ml-4">Frontend Developer</h3>
+                        <p class="ml-4">I started work as a frontedn developer on different Projects</p>
+                    </div>
+                    <div class="my">
+                        <h5 class="time"><i class="fas fa-briefcase"></i> 2020-2021</h5>
+                        <h3 class="part ml-4">Back-End Developer</h3>
+                        <p class="ml-4">I started work on backend with PHP Sql Mongodb nodejs</p>
+                    </div>
+                    <div class="my">
+                        <h5 class="time"><i class="fas fa-briefcase"></i> 2021 Pre.</h5>
+                        <h3 class="part ml-4">Web Designer</h3>
+                        <p class="ml-4">After experience of frontend and backend i start work as a web designer</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="heading mt-2" id="myblog">
+            <div class="backname">
+                <h1>POSTS</h1>
+            </div>
+            <div class="frontname">
+                <h1>MY<span style="color: #FFB400;">BLOG</span></h1>
+            </div>
+        </div>
+    </section>
+    <section class="blog mt-2" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center">
+                <%for(let i=0; i< projectdata[0].blogpost.length ; i++){ %>
+                    <div class="col-md-4 col-sm-6 cardiv justify-content-center mt-3">
+                        <div class="card">
+                            <div class="card-img ">
+                                <a href="<%- projectdata[0].blogpost[i].blogimage %>" data-lightbox="upload-1">
+                                    <img src="<%- projectdata[0].blogpost[i].blogimage %>"class=" card-img-top  img-fluid figure-img" alt=""></a>
+                                <!-- <img class="card-img-top img-fluid" src="<%- projectdata[0].blogpost[i].blogimage %>"
+                                    alt="Card image cap"> -->
+                            </div>
+                            <div class="card-body">
+                                <a href="blogbox/<%- i%>" style="text-decoration: none;">
+                                    <h5 class="card-title">
+                                        <%- projectdata[0].blogpost[i].blogname %>
+                                    </h5>
+                                </a>
+                                <div class="card-text mb-2" style="font-size: 14px;">
+                                    <%- projectdata[0].blogpost[i].blogdesc %>
+                                </div>
+                                <div class="carddate" style="position: absolute; bottom: 0px;">
+                                    <p>
+                                        <%- projectdata[0].blogpost[i].blogdate %> | By Admin
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <%}%>
+            </div>
+            <div class="socialbtn mt-4 showmore">
+                <a class=" ml-3 button" href="">
+                    <span class="button-text">Show more</span>
+                    <span class="button-icon fas fa-eye">
+                    </span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <div class="heading mt-2" id="mycontact">
+        <div class="backname2">
+            <h1>Working</h1>
+        </div>
+        <div class="frontname2">
+            <h1>OTHER<span style="color: #FFB400;">PROJECT</span></h1>
+        </div>
+    </div>
+    <section class="otherroject">
+        <div class="container mt-3">
+            <div class="row d-flex justify-content-center align-items-center">
+                <%for(let i=0; i< projectdata[0].project.length ; i++){ %>
+                    <div class="col-md-4 otherporject mt-3 d-flex justify-content-center">
+                        <div class="card">
+                            <div class="icon d-flex justify-content-between">
+                                <div class="icon1 d-flex justify-content-center align-items-center">
+                                    <span><i class="far fa-folder"></i></span>
+                                </div>
+                                <div class="icon2 d-flex justify-content-center align-items-center">
+                                    <span><a href="<%- projectdata[0].project[i].link %>" target="_blank"><i
+                                                class="fab fa-github"></i></a></span>
+                                </div>
+                            </div>
+                            <div class="projectname">
+                                <h5>
+                                    <%- projectdata[0].project[i].projectname %>
+                                </h5>
+                            </div>
+                            <div class="projectdesc">
+                                <%- projectdata[0].project[i].desc %>
+                            </div>
+                            <div class="projectlang">
+                                <b>Languages:</b>
+                                <%- projectdata[0].project[i].plang %>
+                            </div>
+                        </div>
+                    </div>
+                    <%}%>
+            </div>
+        </div>
+    </section>
+    <div class="heading mt-2" id="mycontact">
+        <div class="backname2">
+            <h1>INTOUCH</h1>
+        </div>
+        <div class="frontname2">
+            <h1>CONTACT<span style="color: #FFB400;">ME</span></h1>
+        </div>
+    </div>
+    <section class=" mt-2  " data-aos="zoom-in" data-aos-duration="2000">
+        <div class="container">
+            <div class="row contact">
+                <div class="col-md-4 d-flex justify-content-center flex-column">
+                    <h2 class="upper-case">DON'T BE SHY !</h2>
+                    <p>
+                        Feel free to get in touch with me. I am always open to discussing new projects, creative ideas
+                        or opportunities to be part of your visions.
+                    </p>
+                    <div class="d-flex">
+                        <div class="d-flex justify-content-center align-items-center mr-3">
+                            <h1 style="color: #FFB400;"><i class="fas fa-envelope-open"></i></h1>
+                        </div>
+                        <div class="maail">
+                            <h5>MAIL ME</h5>
+                            <h6>usamaabubakar785@gmail.com</h6>
+                        </div>
+                    </div>
+                    <div class="d-flex mt-3">
+                        <div class="d-flex justify-content-center align-items-center mr-3">
+                            <h1 style="color: #FFB400;"><i class="fas fa-phone-square-alt"></i></h1>
+                        </div>
+                        <div>
+                            <h5>CALL ME</h5>
+                            <strong>+92304-466725-9</strong>
+                        </div>
+                    </div>
+
+                    <div class="social flex-column">
+                        <ul class="d-flex justify-content-start ">
+                            <li><a href="<%- projectdata[0].facebook%>" target="__blank"><i
+                                        class="fab fa-facebook"></i></a></li>
+                            <li><a href="<%- projectdata[0].whatsapp%>" target="__blank"><i
+                                        class="fab fa-whatsapp"></i></a></li>
+                            <li><a href="<%- projectdata[0].instgram%>" target="__blank"><i
+                                        class="fab fa-instagram"></i></a></li>
+                            <li><a href="<%- projectdata[0].github%>" target="__blank"><i class="fab fa-github"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-8 area">
+                    <form action="/contact" method="POST">
+                        <div class="col-12 d-flex justify-content-center align-items-center">
+                            <div class="container-fluid">
+                                <div class="row d-flex justify-content-center align-items-center">
+                                    <div class=" col-md-4 mt-4 con-item">
+                                        <input type="text" placeholder=" YOUR NAME" required name="cname">
+                                    </div>
+                                    <div class="col-md-4 mt-4 con-item ">
+                                        <input type="email" placeholder="YOUR EMAIL" required name="cemail">
+                                    </div>
+                                    <div class=" col-md-4 mt-4 con-item">
+                                        <input type="text" placeholder="YOUR SUBJECT" required name="csubject">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-12 msg mt-4 d-flex flex-column ">
+                            <textarea id="" cols="30" rows="10" placeholder="YOUE MESSAGE" style="width: 100%;" required
+                                name="cmsg"></textarea>
+                            <div class="socialbtn mt-2">
+                                <button type="submit" class="ml-4 d-flex justify-content-center align-items-center"
+                                    style="background: #FFB400; outline:none; height: 2rem; border-radius: 5px;
+                            font-weight: bold; border: none;">
+                                    Send Message </button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container-fluid mt-2">
+            <div class="row">
+
+                <div class="foot col-12 d-flex flex-column justify-content-center align-items-center">
+                    <img src="admin.png" class="mt-2" alt="" style="border-radius: 50%;" height="70px" width="70px">
+                    <h1>YOU HAVE NEW PROJECT? <span style="color: #FFB400;">LETS TALK</span></h1>
+                    <div class="cir"></div>
+                    <div class="footicon d-flex justify-content-center align-items-center">
+
+                        <i class="fas fa-campground"></i>
+
+                    </div>
+                    <h6 class="d-flex mt-4">&#169 2020-2021 Design By <span style="color: #FFB400;" class="ml-1">USAMA
+                            ABUBAKAR</span></h6>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="typed.js"></script>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="jquery-latest.min.js"></script>
+
+    <script>
+        $('#topheader .navbar-nav a').on('click', function () {
+            $('#topheader .navbar-nav').find('li.active').removeClass('active');
+            $(this).parent('li').addClass('active');
+        });
+    </script>
+    <script>
+        $(".sideemail").fadeOut();
+        $(".gotop").fadeOut()
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 400) {
+                $(".gotop").fadeIn();
+                $(".sideemail").fadeIn();
+            }
+            else {
+                $(".gotop").fadeOut();
+                $(".sideemail").fadeOut();
+            }
+
+        })
+        $('.gotop').click(function (event) {
+            event.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, '300');
+        })
+    </script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        var isAlreadyRun = false;
+
+        $(window).scroll(function () {
+
+            $('.counter-show').each(function (i) {
+
+                var bottom_of_object = $(this).position().top + $(this).outerHeight() / 2;
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+
+                if (bottom_of_window > (bottom_of_object + 20)) {
+                    if (!isAlreadyRun) {
+                        $('.counter').each(function () {
+
+                            $(this).prop('Counter', 0).animate({
+                                Counter: $(this).text()
+                            }, {
+                                duration: 3500,
+                                easing: 'swing',
+                                step: function (now) {
+                                    $(this).text(Math.ceil(now));
+                                }
+                            });
+                        });
+                    }
+                    isAlreadyRun = true;
+                }
+            });
+
+        });
+    </script>
+    <script>
+        $(".cardiv").slice(0, 3).show();
+        $(".showmore").click(function (event) {
+            event.preventDefault();
+            $(".cardiv:hidden").slice(0, 3).slideDown();
+            if ($(".cardiv:hidden").length == 0) {
+                $(".showmore").fadeOut();
+            }
+
+        })
+
+    </script>
+
+    <script>
+        var typed = new Typed('.type', {
+
+            strings: [
+                'Web Developer',
+                'Python Developer',
+                'a Designer',
+                'a JS developer',
+                'Creative designer',
+                'a Photographer'
+            ],
+            typeSpeed: 60,
+            backSpeed: 60,
+            loop: true
+        });
+    </script>
+</body>
+
+</html>
