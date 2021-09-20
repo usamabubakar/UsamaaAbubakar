@@ -50,7 +50,7 @@ app.use(session({
 
 
 // =======================================================================================
-const DB='mongodb+srv://usama:usama@cluster0.kvona.mongodb.net/samiportfolio?retryWrites=true&w=majority';
+const DB='mongodb+srv://usama:usama@cluster0.zoxl0.mongodb.net/portfolioo?retryWrites=true&w=majority';
 mongoose.connect(DB, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -219,7 +219,7 @@ const userschema = new mongoose.Schema({
 
 })
 
-const user_colection = new mongoose.model("portfolio", userschema);
+const user_colection = new mongoose.model("adminside", userschema);
 // const data_collection=new mongoose.model("datacolection",dataschema);
 // 
 app.get("/home",async(req,res)=>{
