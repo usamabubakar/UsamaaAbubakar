@@ -13,7 +13,6 @@ app.use(body.urlencoded({ extended: false }));
 // ================================================================midel ware for folder==============
 let pathh = path.join(__dirname, "../template", "views");
 const static_path = path.join(__dirname, "../template/picandcss");
-// app.use(express.static(__dirname+"./picandcss"));
 app.use(express.static(static_path));
 app.set("view engine", "ejs");
 app.set("views", pathh);
