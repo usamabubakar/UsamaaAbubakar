@@ -50,7 +50,7 @@ app.use(session({
 
 
 // =======================================================================================
-const DB='mongodb+srv://usama:usama@cluster0.kvona.mongodb.net/portfolio?retryWrites=true&w=majority';
+const DB='mongodb+srv://usama:usama@cluster0.kvona.mongodb.net/samiportfolio?retryWrites=true&w=majority';
 mongoose.connect(DB, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
